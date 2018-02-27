@@ -10,7 +10,7 @@ const debug = require('debug')('gifjif:server');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = 'mongodb://localhost/gifjif';
-mongoose.connecT(MONGODB_URI);
+mongoose.connect(MONGODB_URI); //these two lines connect us to the database
 
 app.listen(PORT, () =>{
   debug(`listening on ${PORT}`)
