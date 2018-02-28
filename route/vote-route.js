@@ -14,7 +14,7 @@ voteRouter.post('/api/vote', jsonParser, function(req, res, next) {
   .catch(next);
 });
 
-voteRouter.get('/api/list/:id', function(req, res, next) {
+voteRouter.get('/api/vote/:id', function(req, res, next) {
   debug('GET: /api/note');
 
   Vote.findById(req.params.id)
